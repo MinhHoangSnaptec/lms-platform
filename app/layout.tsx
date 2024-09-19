@@ -10,8 +10,8 @@ import { ConfettiProvider } from '@/components/providers/confetti-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'KenDev NextJS LMS',
-  description: 'Coded by Ken along with Antonio',
+  title: 'Minh NextJS LMS',
+  description: 'Coded by Minh along with Antonio',
 }
 
 export default function RootLayout({

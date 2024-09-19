@@ -101,18 +101,20 @@ export const CategoryForm = ({
             <FormField
               control={form.control}
               name="categoryId"
-              render={({ field }) => (
+              render={({ field }) => {
+                // console.log({field})
+                return(
                 <FormItem>
                   <FormControl>
                     <Combobox
-                      options={...options}
+                      options={options}
                       disabled={isSubmitting}
                       {...field}
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-              )}
+              )}}
             />
             <div className="flex items-center gap-x-2">
               <Button
