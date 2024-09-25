@@ -20,10 +20,10 @@ const CourseLayout = async ({
   if (!userId) {
     return redirect("/")
   }
-  const safeProfile = await getSafeProfile();
-  if (!safeProfile) {
-    return redirect("/");
-  }
+  // const safeProfile = await getSafeProfile();
+  // if (!safeProfile) {
+  //   return redirect("/");
+  // }
 
   const course = await db.course.findUnique({
     where: {
@@ -62,7 +62,7 @@ const CourseLayout = async ({
         <CourseNavbar
           course={course}
           progressCount={progressCount}
-          currentProfile={safeProfile}
+          // currentProfile={safeProfile}
         />
       </div>
       <div className="hidden md:flex h-full w-80 flex-col fixed inset-y-0 z-50">

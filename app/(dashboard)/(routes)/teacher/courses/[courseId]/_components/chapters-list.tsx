@@ -39,20 +39,24 @@ export const ChaptersList = ({
     if (!result.destination) return;
 
     const items = Array.from(chapters);
+    // const items = [...chapters]
+
     const [reorderedItem] = items.splice(result.source.index, 1);
+    
     items.splice(result.destination.index, 0, reorderedItem);
+    setChapters(items);
 
     const startIndex = Math.min(result.source.index, result.destination.index);
     const endIndex = Math.max(result.source.index, result.destination.index);
 
     const updatedChapters = items.slice(startIndex, endIndex + 1);
 
-    setChapters(items);
-
     const bulkUpdateData = updatedChapters.map((chapter) => ({
       id: chapter.id,
       position: items.findIndex((item) => item.id === chapter.id)
     }));
+    console.log({result, items, chapters, bulkUpdateData})
+
 
     onReorder(bulkUpdateData);
   }

@@ -21,6 +21,9 @@ export const Editor = ({
       <ReactQuill
         theme="snow"
         value={value}
+        // onChange={(value)=>{console.log(value);
+        //   onChange(value)
+        // }}
         onChange={onChange}
       />
     </div>
