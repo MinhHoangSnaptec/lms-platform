@@ -43,8 +43,8 @@ export const Chart = ({
                     <Bar 
                         dataKey="total" 
                         fill="#8884d8" 
-                        barSize={20}
-                        radius={[4, 4, 4, 0]}
+                        // barSize={20}
+                        radius={[4, 4, 4, 4]}
                     />
                 </BarChart>
             </ResponsiveContainer>
